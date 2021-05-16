@@ -51,6 +51,7 @@ Recursion imposes stack allocation.
 ## Activation record
 
 Layout:
+<br>
 <img style="width: 100%; max-width: 500px; border-radius: 5px" src="./images/pl-03-subprograms-activation-record-layout.png">
 
 **Frame pointer**: pointing to the head/base of the stack frame/activation record
