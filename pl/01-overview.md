@@ -43,6 +43,20 @@ Does not add expressiveness to the language—for convenience only.
 - alernation: `<Symb> ::= <Letter> | <Digit>`
 - sequencing: `<Id> ::= <Letter> <Symb>`
 
+### BNF Building blocks
+
+1. Numbers of a and b are equal (in any order):
+
+```
+<E> :== a <E> b <E> | b <E> a <E> | ε
+```
+
+2. a is more:
+
+```
+<A> :== <E> a <A> | <E> a <E>
+```
+
 ## EBNF (Extended Backus-Naur Form)
 
 Encompasses everything BNF has, plus:
@@ -123,9 +137,9 @@ Input string: `52.316`
 Grammar:
 
 ```
-Float ::= Digits | Digits. Digits
-Digits ::= Digit | Digit Digits
-Digit ::= 0|1|2|3|4|5|6|7|8|9
+<Float> ::= <Digits> | <Digits> '.' <Digits>
+<Digits> ::= <Digit> | <Digit> <Digits>
+<Digit> ::= '0'|'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'
 ```
 
 Parse tree:
@@ -137,3 +151,63 @@ Parse tree:
 If the parse tree for a sentence is not unique, the grammar is ambiguous.
 
 > From recitation: A CFG is ambiguous if it has more than one parse tree for some strings. i.e. there is more than 1 derivation for a string.
+
+### "Dangling if" rewrite solution
+
+```
+<S> ::= <M> | <U>
+<O> ::= <V> ‘=’ <E> | <S> ‘;’ <S>
+<M> ::= ‘if’ <B> ‘then’ <M> ‘else’ <M> | <O>
+<U> ::= ‘if’ <B> ‘then’ <S> | ‘if’ <B> ‘then’ <M> ‘else’ <U>
+<B> ::= <E> ‘===’ <E>
+<V> ::= ‘x’ | ‘y’ | ‘z’
+<E> ::= <V> | ‘0’ | ‘1’ | ‘2’ | ‘3’
+```
+
+### Precedence
+
+If we say operator `*` has precedence over operator `+`. This means expression `5 + 2 * 3` should be evaluated as: `5 + (2 * 3)`, <span style="color:red">not</span> `(5 + 2) * 3`.
+
+**Precedence can be specified in two ways:**
+
+- Write precedence directly into the rules: higher precedence appear in deeper rules.
+- Write an ambiguous grammar first, then specify operator precedence separately.
+
+### Associativity
+
+Associativity tells the parser what to do with operators at the same level of
+precedence.
+
+For example, `5 - (2 - 3)` verses `(5 - 2) - 3`. Two `-` operators have the same precedence. However, how you associate them will yield different mathematical results.
+
+Usually, you can specify using _left_ associativity or _right_ associativity.
+
+## Scanners and parsers
+
+Scanners (or tokenizers) read in text and extract tokens. Parsers read in tokens and construct a parse tree.
+
+### LL parsers
+
+LL (Left-to-right, Leftmost derivation) parsers are also called top-down, recursive descent or predictive parsers. It begins at the root symbol.
+
+`LL(k)`: means `k` look ahead.
+
+**Problems with LL parsing:**
+
+- Left recursion: a grammar is left-recursive if there exists non-terminal `A` such that `<A> ::= <A> α` for some `α`.
+- Common prefixes: if there exists a non-terminal `A` and terminal `b` such that there exists rule R1 `<A> ::= b ...` and R2 `<A> ::= b ...`.
+
+**How to eliminate left-recursive problem:**
+
+Original:
+
+```
+A → Aα1| Aα2 | … | Aαm | β1 | β2 | … | βn
+```
+
+Convert to:
+
+```
+A  → β1A' | β2 A' | … | βnA'
+A' → α1A' | α2A' | … | αmA' | ε
+```
