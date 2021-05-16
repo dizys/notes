@@ -1,7 +1,36 @@
 module.exports = {
   dest: 'public',
   title: 'Notes',
-  globalUIComponents: ['ThemeManager'],
+  head: [
+    [
+      'meta',
+      {
+        name: 'theme-color',
+        content: '#3eaf7c',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'apple-mobile-web-app-capable',
+        content: 'yes',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'apple-mobile-web-app-status-bar-style',
+        content: 'black',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: "'stylesheet",
+        href: '/styles/website.css',
+      },
+    ],
+  ],
   plugins: [
     [
       '@vuepress/search',
@@ -12,8 +41,14 @@ module.exports = {
     ['@vuepress/medium-zoom'],
   ],
   theme: 'vuepress-theme-succinct',
+  globalUIComponents: ['ThemeManager'],
   themeConfig: {
-    sidebar: {'/pl/': ['', 'ml']},
-    displayAllHeaders: true,
+    lastUpdated: true,
+    repo: 'https://github.com/dizys/notes',
+    editLinks: true,
+    editLinkText: 'Help me improve this note!',
+    sidebar: {
+      '/pl/': ['', '01-overview', '06-ml'],
+    },
   },
 };
