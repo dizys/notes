@@ -59,8 +59,13 @@ module.exports = {
             '02-imperative-languages',
             '03-subprograms',
             '04-functional-programming',
+            '05-types',
             '06-ml',
           ],
+        },
+        {
+          title: 'Assignments',
+          children: ['homework-1', 'homework-2', 'homework-3', 'homework-4'],
         },
       ],
     },
