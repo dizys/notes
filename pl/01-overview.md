@@ -111,3 +111,29 @@ a-z and A-Z
 ## Parse tree
 
 A parse tree describes the grammatical structure of a sentence
+
+- leaf nodes are terminal symbols
+- internal nodes are non-terminal symbols
+- construction of tree from sentence is called _parsing_
+
+**Example:**
+
+Input string: `52.316`
+
+Grammar:
+
+```
+Float ::= Digits | Digits. Digits
+Digits ::= Digit | Digit Digits
+Digit ::= 0|1|2|3|4|5|6|7|8|9
+```
+
+Parse tree:
+
+<img style="width: 100%; max-width: 500px; border-radius: 5px" src="./images/pl-01-overview-parse-tree-example.png">
+
+## Grammar ambiguity
+
+If the parse tree for a sentence is not unique, the grammar is ambiguous.
+
+> From recitation: A CFG is ambiguous if it has more than one parse tree for some strings. i.e. there is more than 1 derivation for a string.
