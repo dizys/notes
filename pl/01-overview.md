@@ -1,6 +1,6 @@
 # Overview
 
-> Lecture slide (protected link): [click here](https://www.kdocs.cn/p/104545603342)
+> Lecture slide: [click here](https://www.kdocs.cn/p/104545603342)
 
 History, standards, syntax, semantics, grammars, parsing.
 <br>

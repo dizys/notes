@@ -5,5 +5,8 @@ tagline: May the force be with my finals
 footer: Written by Dizy with ❤️
 ---
 
-- [Notice](./notice.md) before reading my notes.
+See the [notice](./notice.md) before reading the notes.
+
+**Spring 2021**
+
 - [CSCI-GA 2110 Programming Languages](./pl) by Cory Plock
