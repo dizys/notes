@@ -53,7 +53,7 @@ module.exports = {
         {
           title: 'Programming Languages',
           collapsable: false,
-          children: ['', '01-overview', '06-ml'],
+          children: ['', '01-overview', '02-imperative-languages', '06-ml'],
         },
       ],
     },
