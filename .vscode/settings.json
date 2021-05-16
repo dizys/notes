@@ -12,6 +12,13 @@
   "cSpell.words": [
     "Kleene",
     "Plock",
+    "actuals",
+    "callees",
+    "cdecl",
+    "fastcall",
+    "printf",
+    "stdcall",
+    "thiscall",
     "vuepress"
   ],
 }

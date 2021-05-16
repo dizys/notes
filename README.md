@@ -1,6 +1,7 @@
 ---
 home: true
 heroImage: /nyu-logo.png
+heroText: Course Notes
 tagline: May the force be with my finals
 footer: Written by Dizy with ❤️
 ---

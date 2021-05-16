@@ -58,6 +58,7 @@ module.exports = {
             '01-overview',
             '02-imperative-languages',
             '03-subprograms',
+            '04-functional-programming',
             '06-ml',
           ],
         },
