@@ -45,10 +45,17 @@ module.exports = {
   themeConfig: {
     lastUpdated: true,
     repo: 'https://github.com/dizys/notes',
+    docsBranch: 'main',
     editLinks: true,
     editLinkText: 'Help me improve this note!',
     sidebar: {
-      '/pl/': ['', '01-overview', '06-ml'],
+      '/pl/': [
+        {
+          title: 'Programming Languages',
+          collapsable: false,
+          children: ['', '01-overview', '06-ml'],
+        },
+      ],
     },
   },
 };
