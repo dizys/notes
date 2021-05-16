@@ -1,2 +1,3 @@
-# nyu-pl-notes
-Notes for NYU Programming Languages course final exam preparation
+# Notes
+
+My notes for NYU courses
