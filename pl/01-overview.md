@@ -1,5 +1,7 @@
 # Overview
 
+Lecture slide (protected link): [click here](https://www.kdocs.cn/p/104545603342)
+
 ## Programming paradigms
 
 ### Imperative (von Neumann)
