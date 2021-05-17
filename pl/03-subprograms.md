@@ -108,3 +108,24 @@ O(1) display lookup: one entry per scoping level (known at compile time),
 plus dereference.
 
 <img style="width: 100%; max-width: 300px; border-radius: 5px" src="./images/pl-03-subprograms-global-linkage-display.png">
+
+## First-class & higher-order functions
+
+Allowing functions as first-class values forces heap allocation of activation
+records. Also, environment of function definition must be preserved until the point of
+call: activation record cannot be reclaimed if it creates functions.
+
+As a result, functional languages require more complex run-time management.
+
+### Higher-order functions
+
+Higher-order functions are the functions that take (other) functions as arguments
+and/or return functions. (A function that takes/returns pointers to functions can also be considered a higher-order function.)
+
+How they are restricted in different languages:
+
+- C: no nested definitions, so environment is always global.
+- C++: ditto, except for nested classes.
+- Ada: static checks to reject possible dangling references.
+- Modula: pointer to function illegal if function not declared at top-level.
+- ML, Haskell: no restrictions. For example, compose function: `fun compose f g x = f (g x)`
