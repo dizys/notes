@@ -98,6 +98,13 @@ Two solutions to handle objects of dynamic size on activation record:
 
 ### Static links
 
-Set up as part of call prologue.
+Set up as part of call prologue. To retrieve entity n scopes out, need n dereference operations.
 
-<img style="width: 100%; max-width: 600px; border-radius: 5px" src="./images/pl-03-subprograms-global-linkage-static-links.png">
+<img style="width: 100%; max-width: 400px; border-radius: 5px" src="./images/pl-03-subprograms-global-linkage-static-links.png">
+
+### Display
+
+O(1) display lookup: one entry per scoping level (known at compile time),
+plus dereference.
+
+<img style="width: 100%; max-width: 300px; border-radius: 5px" src="./images/pl-03-subprograms-global-linkage-display.png">
