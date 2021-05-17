@@ -10,6 +10,7 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "cSpell.words": [
+    "Alore",
     "Kleene",
     "Plock",
     "actuals",
@@ -17,8 +18,11 @@
     "callees",
     "cdecl",
     "fastcall",
+    "memcpy",
     "printf",
     "stdcall",
+    "subclassing",
+    "subtyping",
     "thiscall",
     "vuepress"
   ],
