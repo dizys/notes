@@ -96,3 +96,24 @@ Multiple definitions of a function with the same name, each for a different set 
 A relation between types. Similar to but not the same as subclassing.
 
 Can be used in two different ways: **subtype polymorphism** and **coercion**.
+
+Examples:
+
+1. `{a, b, c}` is a subtype of `{a, c}`.
+2. `a|c` is a subtype of `a|b|c`.
+3. Range `1..100` is a subtype of `1..500`.
+
+### Subtype/Supertype conversions
+
+**Typecasting** is an _explicit_ conversion of one type to another. Source type is known or can be inferred, destination type must be specified by the programmer.
+
+Two variations:
+
+- **Type widening (lifting)**: converting subtype to supertype (coercion can also be used).
+- **Type narrowing**: converting supertype to subtype. Involves information loss.
+
+### Subtype polymorphism vs coercion
+
+**Subtype polymorphism**: ability to _treat_ a value of a subtype as a value of a supertype.
+<br>
+**Coercion**: ability to _convert_ a value of a subtype to a value of a supertype.
