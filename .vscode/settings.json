@@ -18,6 +18,8 @@
     "callees",
     "cdecl",
     "datatypes",
+    "deallocation",
+    "defragmentation",
     "fastcall",
     "memcpy",
     "printf",
