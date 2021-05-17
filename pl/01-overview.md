@@ -8,6 +8,8 @@ Readings: Scott, ch 1 - 2
 <br>
 See [resources folder](https://newclasses.nyu.edu/portal/site/dd700183-e7c5-4095-b7c7-84d4f34b722f/tool/77e1f123-557e-4781-8580-6713673dc39e?panel=Main) for language standards documents: C11, C++17, ECMA-262, ECMA-334, and JLS15.
 
+[[toc]]
+
 ## Programming paradigms
 
 ### Imperative (von Neumann)

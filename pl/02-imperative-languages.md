@@ -6,6 +6,8 @@ Names, binding, scope, lifetime, nesting, control structures.
 <br>
 Readings: Scott, ch 3
 
+[[toc]]
+
 ## Names
 
 Mutable variables, values, functions, types, type constructors, classes, modules/packages, execution points (labels), execution points with environment (continuation).

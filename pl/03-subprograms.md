@@ -6,6 +6,8 @@ Functions and procedures. Parameter passing. Nested procedures. First-class and 
 <br>
 Readings: Scott, ch 6, 8.1 - 8.3
 
+[[toc]]
+
 ## Parameter passing
 
 When defining functions, the names of variables we give are called (formal) parameters.
