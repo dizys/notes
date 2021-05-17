@@ -43,8 +43,8 @@ Recursion imposes stack allocation.
 
 - **activation record**: hold actuals, linkage information, saved registers, local entities.
 - **caller**: place actuals on stack, return address, linkage information, then transfer control to callee.
-- **prologue**: save registers, allocate space for locals.
-- **epilogue**: place return value in register or stack position, update actuals, restore registers, then transfer control to caller.
+- **prologue**: (before) save registers, allocate space for locals.
+- **epilogue**: (after) place return value in register or stack position, update actuals, restore registers, then transfer control to caller.
 - **binding of locations**: actuals and locals are at fixed offsets from frame pointers.
 - **complications**: variable # of actuals, dynamic objects.
 
@@ -89,3 +89,15 @@ Two solutions to handle objects of dynamic size on activation record:
 - Solution 2: local indirection: activation record holds offset into stack faster allocation/deallocation, complex implementation.
 
 ## Global linkage
+
+**Static chain/link** is a pointer to activation record of statically enclosing scope.
+<br>
+**Display** is an array of pointers to activation records.
+
+> Functional languages, however, do not use global linkage because they allocate activation records on heap.
+
+### Static links
+
+Set up as part of call prologue.
+
+<img style="width: 100%; max-width: 600px; border-radius: 5px" src="./images/pl-03-subprograms-global-linkage-static-links.png">
