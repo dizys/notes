@@ -61,6 +61,7 @@ module.exports = {
             '04-functional-programming',
             '05-types',
             '06-ml',
+            '07-gc',
           ],
         },
         {
