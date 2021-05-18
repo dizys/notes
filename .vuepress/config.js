@@ -62,6 +62,7 @@ module.exports = {
             '05-types',
             '06-ml',
             '07-gc',
+            '08-oop',
           ],
         },
         {
