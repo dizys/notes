@@ -1,3 +1,7 @@
+---
+sidebarDepth: 0
+---
+
 # Introduction
 
 | Course Code | CSCI-GA.2110-001                            |
