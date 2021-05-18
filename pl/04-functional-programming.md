@@ -1,3 +1,7 @@
+---
+sidebarDepth: 3
+---
+
 # Functional Programming
 
 > Lecture slide: [click here](https://www.kdocs.cn/p/105324573301)
