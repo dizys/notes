@@ -70,6 +70,36 @@ module.exports = {
           children: ['homework-1', 'homework-2', 'homework-3', 'homework-4'],
         },
       ],
+      '/os/': [
+        {
+          title: 'Operating Systems',
+          collapsable: false,
+          children: [
+            '',
+            '01-kernel-structure-and-syscalls',
+            '02-processes-and-threads',
+            '03-process-scheduling',
+          ],
+        },
+        {
+          title: 'Assignments',
+          children: ['lab-1', 'lab-2'],
+        },
+      ],
+      '/database/': [
+        {
+          title: 'Database Systems',
+          collapsable: false,
+          children: [''],
+        },
+      ],
+      '/devops/': [
+        {
+          title: 'DevOps and Agile Methodologies',
+          collapsable: false,
+          children: [''],
+        },
+      ],
     },
   },
 };
